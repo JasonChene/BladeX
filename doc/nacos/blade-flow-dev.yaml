@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #driver-class-name: org.postgresql.Driver
+    #driver-class-name: oracle.jdbc.OracleDriver
+    druid:
+      # MySql、PostgreSQL校验
+      validation-query: select 1
+      # Oracle校验
+      #validation-query: select 1 from dual
+
+#项目模块集中配置
+blade:
+  #工作流模块开发生产环境数据库地址
+  datasource:
+    flow:
+      dev:
+        # MySql
+        url: jdbc:mysql://localhost:3306/bladex_flow?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+        username: root
+        password: root
+        # PostgreSQL
+        #url: jdbc:postgresql://127.0.0.1:5432/bladex_flow
+        #username: postgres
+        #password: 123456
+        # Oracle
+        #url: jdbc:oracle:thin:@127.0.0.1:49161:orcl
+        #username: BLADEX_FLOW
+        #password: oracle

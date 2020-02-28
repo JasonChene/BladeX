@@ -1,0 +1,28 @@
+[
+  {
+    "id": "desk-route",
+    "order": 0,
+    "predicates": [
+      {
+        "name": "Path",
+        "args": {
+          "pattern": "/blade-desk/**"
+        }
+      }
+    ],
+    "filters": [],
+    "uri": "lb://blade-desk-me"
+  },
+  {
+    "id": "example-route",
+    "order": 0,
+    "predicates": [{
+      "name": "Path",
+      "args": {
+        "pattern": "/example"
+      }
+    }],
+    "filters": [],
+    "uri": "http://www.example.com"
+  }
+]

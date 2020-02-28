@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    loadbalancer:
+      retry:
+        enabled: true
+
+# 聚合文档配置
+blade:
+  document:
+    resources:
+      - name: 授权模块
+        location: /blade-auth
+      - name: 工作台模块
+        location: /blade-desk
+      - name: 系统模块
+        location: /blade-system
